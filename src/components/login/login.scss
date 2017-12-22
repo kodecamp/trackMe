@@ -1,0 +1,67 @@
+login {
+  ion-content {
+    // background-color: map-get($colors, primary) !important;
+    // background: linear-gradient(
+    //   to left top,
+    //   map-get($colors, primary),
+    //   map-get($colors, seconary)
+    // ) !important;
+    background: linear-gradient(
+      45deg,
+      map-get($colors, primary),
+      map-get($colors, secondary)
+    );
+    position: relative;
+    ion-card {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .btn-panel {
+        padding-top: 16px !important;
+        // border: 1px solid red;
+      }
+
+      ion-card-header {
+        img {
+          width: 64px;
+          display: block;
+          margin: auto auto;
+        }
+      }
+    }
+  }
+
+  // .header {
+  //   height: 60px;
+  //   background-color: teal;
+  // }
+
+  // .container {
+  //   position: absolute;
+  //   top: 50%;
+  //   width: calc(100% - 10px);
+  //   margin: 5px;
+  //   background-color: pink;
+  //   background: linear-gradient(to right, red, yellow);
+  //   transform: translateY(-50%);
+  //   height: 50%;
+  //   box-shadow: 0 1px 1px 2px lightgray;
+  //   padding: 16px;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   button {
+  //     display: block;
+  //     width: 100%;
+  //     margin-top: 16px;
+  //   }
+
+  //   input {
+  //     margin-bottom: 16px;
+  //   }
+  //   // border: 5px solid green;
+  // }
+}
