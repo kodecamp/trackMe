@@ -8,10 +8,11 @@ import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
 import { LoginComponent } from "../components/login/login";
 import { ContactsComponent } from "../components/contacts/contacts";
+import { UserSettingsPageModule } from "../pages/user-settings/user-settings.module";
 
 @NgModule({
   declarations: [MyApp, HomePage, LoginComponent, ContactsComponent],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp)],
+  imports: [BrowserModule, IonicModule.forRoot(MyApp), UserSettingsPageModule],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, HomePage, LoginComponent, ContactsComponent],
   providers: [
