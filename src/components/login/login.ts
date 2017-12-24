@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular/navigation/nav-controller";
 import { HomePage } from "../../pages/home/home";
+import { MenuController } from "ionic-angular/components/app/menu-controller";
 
 @Component({
   selector: "login",
@@ -9,9 +10,13 @@ import { HomePage } from "../../pages/home/home";
 export class LoginComponent {
   text: string;
 
-  constructor(private navCtrl: NavController) {
+  constructor(
+    private navCtrl: NavController,
+    private menuCtrl: MenuController
+  ) {
     console.log("Hello LoginComponent Component ", navCtrl);
     this.text = "Login component";
+    this.menuCtrl.swipeEnable(false);
   }
 
   ionViewCanEnter() {

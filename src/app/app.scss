@@ -22,31 +22,48 @@
   ) !important;
 }
 
-input,
-button {
-  min-height: 48px;
-  min-width: 48px;
+button.primary {
+  background: linear-gradient(
+    45deg,
+    map-get($colors, primary),
+    map-get($colors, dark)
+  );
+}
+button.secondary {
+  background: linear-gradient(
+    45deg,
+    map-get($colors, secondary),
+    map-get($colors, dark)
+  );
 }
 
-@keyframes slideInBothWays {
+.center-h {
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes bounce {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 0.5;
   }
-
-  50% {
-    -webkit-transform: translate3d(50%, 0, 0);
-  }
-
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
   }
 }
 
-.slide-in-both-ways {
-  -webkit-animation: slideInBothWays ease-in 1;
-  animation: slideInBothWays ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 750ms;
-  animation-duration: 750ms;
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
 }

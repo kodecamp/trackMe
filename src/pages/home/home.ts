@@ -8,7 +8,9 @@ import { UserSettingsPage } from "../user-settings/user-settings";
   templateUrl: "home.html"
 })
 export class HomePage {
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {}
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
+    menuCtrl.swipeEnable(true);
+  }
 
   showMenu() {
     this.menuCtrl.toggle();

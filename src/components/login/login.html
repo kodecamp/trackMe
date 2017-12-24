@@ -1,37 +1,16 @@
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <img src="assets/imgs/user.svg" alt="">
-    </ion-card-header>
+  <div class="login-container">
+    <img src="assets/imgs/user.svg" alt="" class="logo-img">
+    <ion-input type="text" placeholder="username"></ion-input>
+    <ion-input type="password" placeholder="password"></ion-input>
+    <button class="login" ion-button icon-right full color="primary" (click)="authenticate()">Login
+      <ion-icon name="log-in"></ion-icon>
+    </button>
+  </div>
 
-    <ion-card-content>
-      <ion-list>
+  <button class="signup" ion-button icon-right full color="secondary" (click)="authenticate()">
+    Sign Up
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
 
-        <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
-
-      </ion-list>
-      <ion-list>
-
-      </ion-list>
-      <div class="btn-panel">
-        <button ion-button full color="primary" (click)="authenticate()">Login</button>
-        <h1>Or</h1>
-        <button ion-button full color="secondary">Register</button>
-      </div>
-
-    </ion-card-content>
-
-  </ion-card>
-  <!-- <img src="assets/imgs/anim_splash.svg" alt="" class="splash"> -->
-  <!-- <div class="splash slide-in-both-ways">
-    <img src="assets/imgs/anim_splash.svg" alt="">
-  </div> -->
 </ion-content>
