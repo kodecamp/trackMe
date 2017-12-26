@@ -5,17 +5,32 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
 import { MyApp } from "./app.component";
-import { HomePage } from "../pages/home/home";
+
 import { LoginComponent } from "../components/login/login";
-import { ContactComponent } from "../components/contact/contact";
 
 import { UserSettingsPageModule } from "../pages/user-settings/user-settings.module";
 
+import { DirectivesModule } from "../directives/directives.module";
+import { ProfileComponent } from "../components/profile/profile";
+import { HomePageModule } from "../pages/home/home.module";
+import { JourneyPageModule } from "../pages/journey/journey.module";
+import { ContactMgmtPageModule } from "../pages/contact-mgmt/contact-mgmt.module";
+import { MessageHistoryPageModule } from "../pages/message-history/message-history.module";
+
 @NgModule({
-  declarations: [MyApp, HomePage, LoginComponent, ContactComponent],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp), UserSettingsPageModule],
+  declarations: [MyApp, LoginComponent, ProfileComponent],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    UserSettingsPageModule,
+    DirectivesModule,
+    HomePageModule,
+    JourneyPageModule,
+    MessageHistoryPageModule,
+    ContactMgmtPageModule
+  ],
   bootstrap: [IonicApp],
-  entryComponents: [MyApp, HomePage, LoginComponent, ContactComponent],
+  entryComponents: [MyApp, LoginComponent, ProfileComponent],
   providers: [
     StatusBar,
     SplashScreen,

@@ -1,3 +1,16 @@
 page-home {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
+    contact {
+      max-width: 50%;
+    }
+  }
+
+  .fab-btn {
+    right: 16px;
+    bottom: 16px;
+  }
 }

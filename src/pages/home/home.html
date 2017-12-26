@@ -1,9 +1,17 @@
 <ion-header>
   <ion-navbar>
+
     <button ion-button menuToggle>
+
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button clear color="dark">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
   <!-- <ion-toolbar>
     <button ion-button (click)="showMenu()">
@@ -17,5 +25,14 @@
   <h3 class="heading">Tracking To</h3>
   <div class="contacts">
     <contact></contact>
+    <contact></contact>
+    <contact></contact>
+    <contact></contact>
   </div>
+
+  <ion-fab class="fab-btn">
+    <button ion-fab color="secondary">
+      <ion-icon name="bus"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
