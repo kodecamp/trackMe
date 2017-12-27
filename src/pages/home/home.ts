@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 import { MenuController } from "ionic-angular/components/app/menu-controller";
-import { UserSettingsPage } from "../user-settings/user-settings";
 import { IonicPage } from "ionic-angular/navigation/ionic-page";
 
 @IonicPage()
@@ -18,7 +17,7 @@ export class HomePage {
     this.menuCtrl.toggle();
   }
 
-  nagivateTo(page: string) {
+  navigateTo(page: string) {
     this.navCtrl.push(page);
   }
 }
