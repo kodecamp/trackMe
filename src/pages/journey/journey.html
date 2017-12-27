@@ -5,14 +5,82 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>journey</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Start New
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Current Location</ion-label>
+        <ion-input type="text" disabled value="Lucknow"> </ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button block icon-right color="light" round>
+          Change Current Location
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Destination</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <button ion-button icon-right full color="primary">
+        Start Journey
+        <ion-icon name="bus"></ion-icon>
+      </button>
+    </ion-card-content>
+  </ion-card>
+  <!-- <h6>Start New</h6>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Current Location</ion-label>
+      <ion-input type="text" disabled value="Lucknow"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button block icon-right clear color="secondary">
+        Change Current Location
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Destination</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button icon-right full color="secondary">
+    Start Journey
+    <ion-icon name="bus"></ion-icon>
+  </button> -->
+
+  <ion-card>
+    <ion-card-header>
+      Active Jouney
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>From :
+        <strong>Allahabad</strong>
+      </ion-label>
+      <ion-label>To :
+        <strong>Lucknow</strong>
+      </ion-label>
+      <ion-label>Current Location :
+        <em>Unchahaar</em>
+      </ion-label>
+      <button ion-button disabled icon-right full color="secondary">I have reached
+
+        <ion-icon name="happy"></ion-icon>
+      </button>
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>

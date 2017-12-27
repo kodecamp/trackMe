@@ -20,4 +20,10 @@ export class HomePage {
   navigateTo(page: string) {
     this.navCtrl.push(page);
   }
+
+  showStatus(contactId: string) {
+    this.navCtrl.push("JourneyStatusPage", {
+      contactId: "1"
+    });
+  }
 }

@@ -3,20 +3,17 @@ import { ErrorHandler, NgModule } from "@angular/core";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-
 import { MyApp } from "./app.component";
-
 import { LoginComponent } from "../components/login/login";
-
 import { UserSettingsPageModule } from "../pages/user-settings/user-settings.module";
-
 import { DirectivesModule } from "../directives/directives.module";
 import { ProfileComponent } from "../components/profile/profile";
 import { HomePageModule } from "../pages/home/home.module";
 import { JourneyPageModule } from "../pages/journey/journey.module";
 import { ContactMgmtPageModule } from "../pages/contact-mgmt/contact-mgmt.module";
 import { MessageHistoryPageModule } from "../pages/message-history/message-history.module";
-import { ContactsProvider } from '../providers/contacts/contacts';
+import { ContactsProvider } from "../providers/contacts/contacts";
+import { JourneyStatusPageModule } from "../pages/journey-status/journey-status.module";
 
 @NgModule({
   declarations: [MyApp, LoginComponent, ProfileComponent],
@@ -28,7 +25,8 @@ import { ContactsProvider } from '../providers/contacts/contacts';
     HomePageModule,
     JourneyPageModule,
     MessageHistoryPageModule,
-    ContactMgmtPageModule
+    ContactMgmtPageModule,
+    JourneyStatusPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, LoginComponent, ProfileComponent],
