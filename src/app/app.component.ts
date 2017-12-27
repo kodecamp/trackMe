@@ -2,8 +2,6 @@ import { Component, ViewChild } from "@angular/core";
 import { Platform, Nav, Menu } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
-
-import { HomePage } from "../pages/home/home";
 import { LoginComponent } from "../components/login/login";
 import { MenuController } from "ionic-angular/components/app/menu-controller";
 import { NavController } from "ionic-angular/navigation/nav-controller";

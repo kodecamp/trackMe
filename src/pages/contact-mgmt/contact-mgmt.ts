@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from "@angular/core";
+import { IonicPage, NavController } from "ionic-angular";
+import { ContactModel } from "../../providers/contacts/contact.model";
 
 /**
  * Generated class for the ContactMgmtPage page.
@@ -10,16 +11,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-contact-mgmt',
-  templateUrl: 'contact-mgmt.html',
+  selector: "page-contact-mgmt",
+  templateUrl: "contact-mgmt.html"
 })
 export class ContactMgmtPage {
+  contacts: ContactModel[] = [];
+  constructor(public navCtrl: NavController) {}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ContactMgmtPage');
-  }
-
+  fetchContacts() {}
 }

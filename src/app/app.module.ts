@@ -16,6 +16,7 @@ import { HomePageModule } from "../pages/home/home.module";
 import { JourneyPageModule } from "../pages/journey/journey.module";
 import { ContactMgmtPageModule } from "../pages/contact-mgmt/contact-mgmt.module";
 import { MessageHistoryPageModule } from "../pages/message-history/message-history.module";
+import { ContactsProvider } from '../providers/contacts/contacts';
 
 @NgModule({
   declarations: [MyApp, LoginComponent, ProfileComponent],
@@ -34,7 +35,8 @@ import { MessageHistoryPageModule } from "../pages/message-history/message-histo
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ContactsProvider
   ]
 })
 export class AppModule {}
