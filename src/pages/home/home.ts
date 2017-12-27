@@ -18,7 +18,7 @@ export class HomePage {
     this.menuCtrl.toggle();
   }
 
-  showSettings() {
-    this.navCtrl.push(UserSettingsPage);
+  nagivateTo(page: string) {
+    this.navCtrl.push(page);
   }
 }
