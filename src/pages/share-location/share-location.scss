@@ -1,0 +1,43 @@
+page-share-location {
+  .selected {
+    background-color: map-get($colors, primary);
+  }
+
+  .ion-content {
+    // width: 60%;
+    border: 1px solid blue;
+    background-color: red;
+  }
+
+  ion-item button {
+    padding: 8px;
+    line-height: 100%;
+  }
+
+  ion-list .item-container {
+    // background-color: red;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 32px;
+      flex-grow: 1;
+    }
+    div {
+      flex-grow: 2;
+    }
+
+    .item-button {
+      flex-grow: 1;
+      height: 48px;
+    }
+
+    // input[type="checkbox"] {
+    //   padding: 16px;
+    // }
+    // ion-radio {
+    //   flex-grow: 1;
+    // }
+  }
+}

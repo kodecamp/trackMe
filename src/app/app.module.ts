@@ -14,6 +14,7 @@ import { ContactMgmtPageModule } from "../pages/contact-mgmt/contact-mgmt.module
 import { MessageHistoryPageModule } from "../pages/message-history/message-history.module";
 import { ContactsProvider } from "../providers/contacts/contacts";
 import { JourneyStatusPageModule } from "../pages/journey-status/journey-status.module";
+import { ShareLocationPageModule } from "../pages/share-location/share-location.module";
 
 @NgModule({
   declarations: [MyApp, LoginComponent, ProfileComponent],
@@ -26,7 +27,8 @@ import { JourneyStatusPageModule } from "../pages/journey-status/journey-status.
     JourneyPageModule,
     MessageHistoryPageModule,
     ContactMgmtPageModule,
-    JourneyStatusPageModule
+    JourneyStatusPageModule,
+    ShareLocationPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, LoginComponent, ProfileComponent],

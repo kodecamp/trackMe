@@ -1,0 +1,85 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Share Locations With</ion-title>
+    <ion-buttons end>
+      <button clear ion-button icon-only (click)="toggleSearchBar()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
+  <ion-searchbar *ngIf="!isHidden"></ion-searchbar>
+  <ion-list>
+
+    <ion-item>
+      <div class="item-container">
+        <img src="assets/imgs/avatars/3.svg" alt="">
+        <div class="contanct-details">
+          <p>Shive Sunder Das</p>
+          <p>7388960367123</p>
+        </div>
+        <button ion-button clear icon-only color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="item-container">
+        <img src="assets/imgs/avatars/3.svg" alt="">
+        <div class="contanct-details">
+          <p>Shive Sunder Das</p>
+          <p>7388960367123</p>
+        </div>
+        <button ion-button clear icon-only color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="item-container">
+        <img src="assets/imgs/avatars/3.svg" alt="">
+        <div class="contanct-details">
+          <p>Shive Sunder Das</p>
+          <p>7388960367123</p>
+        </div>
+        <button ion-button clear icon-only color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="item-container">
+        <img src="assets/imgs/avatars/3.svg" alt="">
+        <div class="contanct-details">
+          <p>Shive Sunder Das</p>
+          <p>7388960367123</p>
+        </div>
+        <button ion-button clear icon-only color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="item-container">
+        <img src="assets/imgs/avatars/3.svg" alt="">
+        <div class="contanct-details">
+          <p>Shive Sunder Das</p>
+          <p>7388960367123</p>
+        </div>
+        <button ion-button clear icon-only color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+        </button>
+
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
