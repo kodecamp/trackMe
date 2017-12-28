@@ -15,6 +15,7 @@ import { MessageHistoryPageModule } from "../pages/message-history/message-histo
 import { ContactsProvider } from "../providers/contacts/contacts";
 import { JourneyStatusPageModule } from "../pages/journey-status/journey-status.module";
 import { ShareLocationPageModule } from "../pages/share-location/share-location.module";
+import { GroupContactProvider } from '../providers/group-contact/group-contact';
 
 @NgModule({
   declarations: [MyApp, LoginComponent, ProfileComponent],
@@ -36,7 +37,8 @@ import { ShareLocationPageModule } from "../pages/share-location/share-location.
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ContactsProvider
+    ContactsProvider,
+    GroupContactProvider
   ]
 })
 export class AppModule {}

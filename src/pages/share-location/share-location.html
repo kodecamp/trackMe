@@ -13,10 +13,26 @@
 
 <ion-content>
   <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
-  <ion-searchbar *ngIf="!isHidden"></ion-searchbar>
+  <ion-searchbar *ngIf="!isHidden" (ionInput)="searchItems($event)" placeholder="By name or mobile no"></ion-searchbar>
   <ion-list>
+    <ion-list-header>
+      Contacts in Group
+    </ion-list-header>
+    <ion-item *ngFor="let groupContact of groupContacts">
+      <div class="item-container">
+        <img [src]="groupContact.profileImgPath" alt="">
+        <div class="contanct-details">
+          <p>{{groupContact.name}}</p>
+          <p>{{groupContact.mobileNo}}</p>
+        </div>
+        <button ion-button clear icon-only color="secondary" (click)="toggleConnectivity(groupContact)">
+          <img *ngIf="groupContact.isConnected" src="assets/imgs/link.svg" alt="">
+          <img *ngIf="!groupContact.isConnected" src="assets/imgs/broken_link.svg" alt="">
+        </button>
 
-    <ion-item>
+      </div>
+    </ion-item>
+    <!-- <ion-item>
       <div class="item-container">
         <img src="assets/imgs/avatars/3.svg" alt="">
         <div class="contanct-details">
@@ -24,7 +40,7 @@
           <p>7388960367123</p>
         </div>
         <button ion-button clear icon-only color="secondary">
-          <ion-icon name="add-circle"></ion-icon>
+          <img src="assets/imgs/broken_link.svg" alt="">
         </button>
 
       </div>
@@ -37,7 +53,8 @@
           <p>7388960367123</p>
         </div>
         <button ion-button clear icon-only color="secondary">
-          <ion-icon name="add-circle"></ion-icon>
+
+          <img src="assets/imgs/broken_link.svg" alt="">
         </button>
 
       </div>
@@ -50,7 +67,7 @@
           <p>7388960367123</p>
         </div>
         <button ion-button clear icon-only color="secondary">
-          <ion-icon name="add-circle"></ion-icon>
+          <img src="assets/imgs/link.svg" alt="">
         </button>
 
       </div>
@@ -63,23 +80,10 @@
           <p>7388960367123</p>
         </div>
         <button ion-button clear icon-only color="secondary">
-          <ion-icon name="add-circle"></ion-icon>
+          <img src="assets/imgs/link.svg" alt="">
         </button>
 
       </div>
-    </ion-item>
-    <ion-item>
-      <div class="item-container">
-        <img src="assets/imgs/avatars/3.svg" alt="">
-        <div class="contanct-details">
-          <p>Shive Sunder Das</p>
-          <p>7388960367123</p>
-        </div>
-        <button ion-button clear icon-only color="secondary">
-          <ion-icon name="add-circle"></ion-icon>
-        </button>
-
-      </div>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
 </ion-content>

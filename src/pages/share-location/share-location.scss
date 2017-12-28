@@ -3,15 +3,8 @@ page-share-location {
     background-color: map-get($colors, primary);
   }
 
-  .ion-content {
-    // width: 60%;
-    border: 1px solid blue;
-    background-color: red;
-  }
-
-  ion-item button {
-    padding: 8px;
-    line-height: 100%;
+  button img {
+    height: 36px;
   }
 
   ion-list .item-container {
@@ -30,14 +23,8 @@ page-share-location {
 
     .item-button {
       flex-grow: 1;
+      padding: 4px;
       height: 48px;
     }
-
-    // input[type="checkbox"] {
-    //   padding: 16px;
-    // }
-    // ion-radio {
-    //   flex-grow: 1;
-    // }
   }
 }
