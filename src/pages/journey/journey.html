@@ -6,8 +6,9 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>journey</ion-title>
+    <ion-title>Journey Details</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 
@@ -18,21 +19,15 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label floating>Current Location</ion-label>
-        <ion-input type="text" disabled value="Lucknow"> </ion-input>
+        <ion-label stacked>Current Location</ion-label>
+        <ion-input type="text" value="Lucknow"> </ion-input>
       </ion-item>
       <ion-item>
-        <button ion-button block icon-right color="light" round>
-          Change Current Location
-          <ion-icon name="create"></ion-icon>
-        </button>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Destination</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label stacked>Destination</ion-label>
+        <ion-input type="text"></ion-input>
       </ion-item>
       <button ion-button icon-right full color="primary" (click)="shareLocation()">
-        Start Journey
+        Share Your Locations With
         <ion-icon name="bus"></ion-icon>
       </button>
     </ion-card-content>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "754392638282",
+    "firebase_url": "https://trackme-at-kc.firebaseio.com",
+    "project_id": "trackme-at-kc",
+    "storage_bucket": "trackme-at-kc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754392638282:android:7a26b8a71e222d2a",
+        "android_client_info": {
+          "package_name": "me.track.kc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754392638282-6rr15pfla3gq5vh4m77gv34321penla6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.track.kc",
+            "certificate_hash": "edc9c3daa7d81730ca2430b464620c3c1926880d"
+          }
+        },
+        {
+          "client_id": "754392638282-qvap72ka2mmagq6m62aool978ut7v26g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdVNrVdHTINy_Tqw0XIe1WnwvimZWASTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754392638282-qvap72ka2mmagq6m62aool978ut7v26g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

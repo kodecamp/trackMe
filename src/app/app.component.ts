@@ -5,25 +5,36 @@ import { SplashScreen } from "@ionic-native/splash-screen";
 import { LoginComponent } from "../components/login/login";
 import { MenuController } from "ionic-angular/components/app/menu-controller";
 import { NavController } from "ionic-angular/navigation/nav-controller";
+import { Storage } from "@ionic/storage";
+// import { Firebase } from "@ionic-native/firebase";
 
 @Component({
   templateUrl: "app.html"
 })
 export class MyApp {
-  rootPage: any = LoginComponent;
+  rootPage: any = "";
   @ViewChild(Nav) navCtrl: NavController;
   @ViewChild(Menu) menuCtrl: MenuController;
 
   constructor(
     platform: Platform,
     statusBar: StatusBar,
-    splashScreen: SplashScreen
+    splashScreen: SplashScreen,
+    private storage: Storage
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      console.log("storage : " + storage);
+      this.storage.get("LoginVerified").then((value: boolean) => {
+        if (value) {
+          this.rootPage = "HomePage";
+        } else {
+          this.rootPage = LoginComponent;
+        }
+      });
     });
   }
 

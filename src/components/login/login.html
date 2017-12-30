@@ -1,14 +1,14 @@
 <ion-content>
   <div class="login-container">
     <img src="assets/imgs/user.svg" alt="" class="logo-img">
-    <ion-input type="text" placeholder="username"></ion-input>
-    <ion-input type="password" placeholder="password"></ion-input>
+    <ion-input type="tel" placeholder="Mobile Number" [(ngModel)]="mobileNo"></ion-input>
+    <ion-input type="password" placeholder="One Time Password" [(ngModel)]="otp"></ion-input>
     <button class="login" ion-button icon-right full color="primary" (click)="authenticate()">Login
       <ion-icon name="log-in"></ion-icon>
     </button>
   </div>
 
-  <button class="signup" ion-button icon-right full color="secondary" (click)="authenticate()">
+  <button class="signup" ion-button icon-right full color="secondary" (click)="navigateToSignUp()">
     Sign Up
     <ion-icon name="arrow-forward"></ion-icon>
   </button>
