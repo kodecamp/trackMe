@@ -5,7 +5,8 @@ import { MenuController } from "ionic-angular/components/app/menu-controller";
 import { NavParams } from "ionic-angular/navigation/nav-params";
 import { Storage } from "@ionic/storage";
 import { AlertController } from "ionic-angular/components/alert/alert-controller";
-// import { Firebase } from "@ionic-native/firebase";
+import { Firebase } from "@ionic-native/firebase";
+import { AngularFirestore } from "angularfire2/firestore";
 import * as firebase from "firebase";
 
 @Component({
@@ -22,11 +23,13 @@ export class LoginComponent {
     private navParams: NavParams,
     private menuCtrl: MenuController,
     private storage: Storage,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private fireStore: AngularFirestore
   ) {
     console.log("Hello LoginComponent Component ", navCtrl);
     this.text = "Login component";
     this.menuCtrl.swipeEnable(false);
+    console.log(fireStore);
   }
 
   ionViewCanEnter() {

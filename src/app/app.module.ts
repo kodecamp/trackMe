@@ -20,6 +20,9 @@ import { ContactsProvider } from "../providers/contacts/contacts";
 import { SMS } from "@ionic-native/sms";
 import { IonicStorageModule } from "@ionic/storage";
 import { Firebase } from "@ionic-native/firebase";
+import { Contacts } from "@ionic-native/contacts";
+import { AngularFireModule } from "angularfire2";
+import { FIREBASE_CONFIG } from "./firebase.credentials";
 import * as firebase from "firebase";
 firebase.initializeApp({
   apiKey: "AIzaSyCfewk1TkNdoCkbcYiD_eXlnh5xixB5_VI",
@@ -47,7 +50,8 @@ firebase.initializeApp({
     IonicStorageModule.forRoot({
       name: "__trackMeDb",
       driverOrder: ["indexeddb", "sqlite", "websql"]
-    })
+    }),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG)
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, LoginComponent, ProfileComponent],
@@ -58,7 +62,8 @@ firebase.initializeApp({
     ContactsProvider,
     GroupContactProvider,
     SMS,
-    Firebase
+    Firebase,
+    Contacts
   ]
 })
 export class AppModule {}

@@ -89,4 +89,5 @@
     <plugin name="cordova-sqlite-storage" spec="^2.1.4" />
     <plugin name="cordova-plugin-firebase" spec="^0.1.25" />
     <allow-navigation href="http://192.168.1.105:8100" />
+    <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
 </widget>
