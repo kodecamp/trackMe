@@ -22,8 +22,10 @@ import { IonicStorageModule } from "@ionic/storage";
 import { Firebase } from "@ionic-native/firebase";
 import { Contacts } from "@ionic-native/contacts";
 import { AngularFireModule } from "angularfire2";
+import { AngularFirestoreModule } from "angularfire2/firestore";
 import { FIREBASE_CONFIG } from "./firebase.credentials";
 import * as firebase from "firebase";
+
 firebase.initializeApp({
   apiKey: "AIzaSyCfewk1TkNdoCkbcYiD_eXlnh5xixB5_VI",
   authDomain: "trackme-at-kc.firebaseapp.com",
@@ -51,7 +53,8 @@ firebase.initializeApp({
       name: "__trackMeDb",
       driverOrder: ["indexeddb", "sqlite", "websql"]
     }),
-    AngularFireModule.initializeApp(FIREBASE_CONFIG)
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFirestoreModule.enablePersistence()
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp, LoginComponent, ProfileComponent],
