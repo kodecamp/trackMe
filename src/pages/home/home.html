@@ -13,23 +13,20 @@
     </ion-buttons>
 
   </ion-navbar>
-  <!-- <ion-toolbar>
-    <button ion-button (click)="showMenu()">
-      Click Me
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-toolbar> -->
 </ion-header>
 
 <ion-content padding>
   <h3 class="heading">Tracking To</h3>
-  <div class="">
-    <contact (click)="showStatus('contactId')"></contact>
-    <contact (click)="showStatus('contactId')"></contact>
-    <contact (click)="showStatus('contactId')"></contact>
-    <contact (click)="showStatus('contactId')"></contact>
-  </div>
 
+  <!-- If list size is not null and greater than 0 render <journery-details 
+  otherwise render the nothingToTrack template -->
+  <div *ngIf="journeyDetailsList?.length > 0 else nothingToTrack">
+    <journey-details *ngFor="let journeyDetails of journeyDetailsList" [journey-param]="journeyDetails"></journey-details>
+  </div>
+  <ng-template #nothingToTrack>
+    <h3>No one is moving.</h3>
+    <img class="no_tracking" src="assets/imgs/not_moving.svg" alt="">
+  </ng-template>
   <ion-fab class="fab-btn">
     <button ion-fab color="secondary" (click)="navigateTo('JourneyPage')">
       <ion-icon name="bus"></ion-icon>

@@ -13,6 +13,14 @@ user_profile : {
      user_name "sushil" 
 }
 
+4.Next time when the user will open the application he/she has to use the given password while registeration.
+
+5.System : System will check the availablility of user in the user_profiles and will save a flag against the mobile no in local storage, once login
+is successful.
+
+6. If user is not available he/she will be prompted for signup.
+
+
 
 Start New Journey
 1. User can start new journey by selecting the

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { IonicPage } from "ionic-angular/navigation/ionic-page";
 
 /**
@@ -15,6 +15,9 @@ import { IonicPage } from "ionic-angular/navigation/ionic-page";
 export class ContactComponent {
   text: string;
   private profileImg: string;
+  @Input("contactId") contactId;
+  @Input("journeyDetails") journeryDetails;
+
   imgs: Array<any> = [
     "assets/imgs/avatars/1.svg",
     "assets/imgs/avatars/2.svg",

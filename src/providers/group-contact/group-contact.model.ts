@@ -1,8 +1,5 @@
+import { UserProfile } from "../user-profiles/user-profile.model";
+
 export class GroupContact {
-  constructor(
-    public name: string,
-    public mobileNo: string,
-    public profileImgPath: string,
-    public isConnected: boolean
-  ) {}
+  constructor(public userProfile: UserProfile, public isConnected: boolean) {}
 }

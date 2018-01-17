@@ -13,6 +13,7 @@ import { JourneyPageModule } from "../pages/journey/journey.module";
 import { ContactMgmtPageModule } from "../pages/contact-mgmt/contact-mgmt.module";
 import { MessageHistoryPageModule } from "../pages/message-history/message-history.module";
 import { JourneyStatusPageModule } from "../pages/journey-status/journey-status.module";
+import { JourneyDetailsModule } from "../components/journey-details/journey-details.module";
 import { ShareLocationPageModule } from "../pages/share-location/share-location.module";
 import { SignupPageModule } from "../pages/signup/signup.module";
 import { GroupContactProvider } from "../providers/group-contact/group-contact";
@@ -25,6 +26,9 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFirestoreModule } from "angularfire2/firestore";
 import { FIREBASE_CONFIG } from "./firebase.credentials";
 import * as firebase from "firebase";
+import { JourneyDetailsProvider } from "../providers/journey-details/journey-details";
+import { UserProfilesProvider } from "../providers/user-profiles/user-profiles";
+import { JourneyReceiverProvider } from '../providers/journey-receiver/journey-receiver';
 
 firebase.initializeApp({
   apiKey: "AIzaSyCfewk1TkNdoCkbcYiD_eXlnh5xixB5_VI",
@@ -48,7 +52,7 @@ firebase.initializeApp({
     JourneyStatusPageModule,
     ShareLocationPageModule,
     SignupPageModule,
-
+    JourneyDetailsModule,
     IonicStorageModule.forRoot({
       name: "__trackMeDb",
       driverOrder: ["indexeddb", "sqlite", "websql"]
@@ -66,7 +70,10 @@ firebase.initializeApp({
     GroupContactProvider,
     SMS,
     Firebase,
-    Contacts
+    Contacts,
+    JourneyDetailsProvider,
+    UserProfilesProvider,
+    JourneyReceiverProvider
   ]
 })
 export class AppModule {}

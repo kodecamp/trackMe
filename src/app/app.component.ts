@@ -12,7 +12,8 @@ import { Storage } from "@ionic/storage";
   templateUrl: "app.html"
 })
 export class MyApp {
-  rootPage: any = "";
+  // set this to empty
+  rootPage: any = "HomePage";
   @ViewChild(Nav) navCtrl: NavController;
   @ViewChild(Menu) menuCtrl: MenuController;
 
@@ -28,13 +29,15 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       console.log("storage : " + storage);
-      this.storage.get("LoginVerified").then((value: boolean) => {
-        if (value) {
-          this.rootPage = "HomePage";
-        } else {
-          this.rootPage = LoginComponent;
-        }
-      });
+
+      // uncomment this for login -> signup
+      // this.storage.get("LoginVerified").then((value: boolean) => {
+      //   if (value) {
+      //     this.rootPage = "HomePage";
+      //   } else {
+      //     this.rootPage = LoginComponent;
+      //   }
+      // });
     });
   }
 
